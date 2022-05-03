@@ -20,6 +20,6 @@ class Command(BaseCommand):
             User.objects.create(username=f"Test{i}",
                                 password=f"Test{i}",
                                 email=f"lox{i}@lox.lox",
-                                firts_name=f"Test{i}",
+                                first_name=f"Test{i}",
                                 last_name=f"Test{i}")
         print('User Ok!')
