@@ -1,6 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from main.models import User
+from rest_framework.authtoken.models import Token
 
 
 class Command(BaseCommand):
@@ -23,4 +24,8 @@ class Command(BaseCommand):
                                        last_name=f"Test{i}")
             user.set_password(f"Test{i}")
             user.save()
+
+        for user in User.objects.all():
+            Token.objects.get_or_create(user=user)
+            
         print('User Ok!')
