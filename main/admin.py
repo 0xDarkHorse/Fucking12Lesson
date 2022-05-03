@@ -15,5 +15,5 @@ class UserAdmin(admin.ModelAdmin):
         ('last_login', 'date_joined'),
         'groups', 'user_permissions',
     )
-    readonly_fields = ('password', 'last_login', 'date_joined', 'uid')
+    readonly_fields = ('last_login', 'date_joined', 'uid')
     search_fields = ('username',)
