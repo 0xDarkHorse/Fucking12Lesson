@@ -140,16 +140,18 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://151.248.125.11:3000",
-    "http://151.248.125.11:8000",
-    "http://151.248.125.11:8080",
-    "http://151.248.125.11:80",
-    "http://localhost:80",
-    "http://localhost:8080",
-    "http://localhost:3000",
-    "http://localhost:8000",
-]
+CORS_ALLOW_ALL_ORIGINS = True
+
+# CORS_ALLOWED_ORIGINS = [
+#     "http://151.248.125.11:3000",
+#     "http://151.248.125.11:8000",
+#     "http://151.248.125.11:8080",
+#     "http://151.248.125.11:80",
+#     "http://localhost:80",
+#     "http://localhost:8080",
+#     "http://localhost:3000",
+#     "http://localhost:8000",
+# ]
 
 AUTH_USER_MODEL = 'main.User'
 
