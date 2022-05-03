@@ -17,9 +17,10 @@ class Command(BaseCommand):
         )
 
         for i in range(15):
-            User.objects.create(username=f"Test{i}",
-                                password=f"Test{i}",
-                                email=f"lox{i}@lox.lox",
-                                first_name=f"Test{i}",
-                                last_name=f"Test{i}")
+            user = User.objects.create(username=f"Test{i}",
+                                       email=f"lox{i}@lox.lox",
+                                       first_name=f"Test{i}",
+                                       last_name=f"Test{i}")
+            user.set_password(f"Test{i}")
+            user.save()
         print('User Ok!')
