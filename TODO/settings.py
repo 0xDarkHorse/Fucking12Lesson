@@ -140,12 +140,12 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS_ALLOWED_ORIGINS = [
-#     "http://151.248.125.11:3000",
-#     "http://151.248.125.11:8000",
-#     "http://151.248.125.11:8080",
-#     "http://151.248.125.11:80",
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "http://151.248.125.11:3000",
+    "http://151.248.125.11:8000",
+    "http://151.248.125.11:8080",
+    "http://151.248.125.11:80",
+]
 
 AUTH_USER_MODEL = 'main.User'
 
