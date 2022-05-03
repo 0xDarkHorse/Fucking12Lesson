@@ -118,13 +118,13 @@ class App extends React.Component {
     }
 
     load_data() {
-        const headers = this.get_headers()
-        axios.get('http://151.248.125.11:8080/api/users/', {headers})
+        //const headers = this.get_headers()
+        axios.get('http://151.248.125.11:8080/api/users/')
             .then(response => {
                 this.setState({users: response.data})
             }).catch(error => console.log(error))
 
-        axios.get('http://151.248.125.11:8080/api/projects/', {headers})
+        axios.get('http://151.248.125.11:8080/api/projects/')
             .then(response => {
                 this.setState({
                     projects: response.data,
@@ -132,7 +132,7 @@ class App extends React.Component {
                 })
             }).catch(error => console.log(error))
 
-        axios.get('http://151.248.125.11:8080/api/todos/', {headers})
+        axios.get('http://151.248.125.11:8080/api/todos/')
             .then(response => {
                 this.setState({todos: response.data})
             }).catch(error => {
